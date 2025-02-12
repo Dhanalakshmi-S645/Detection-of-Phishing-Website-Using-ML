@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Placement Predictor</title>
+</head>
+<body>
+    <nav class="bg-black flex justify-between py-4">
+        <div class="flex">
+            <img class="h-16" src="{% static 'img/LogoPredict.png' %}" alt="" srcset="">
+            <h1 class="text-white mt-4 text-3xl font-bold">Website Phishing Predictor</h1>
+        </div>
+        <div class=" mr-4 mt-6">
+            <a class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8 rounded " href="login">Logout</a>
+        </div>
+    </nav>
+    <section class="mx-auto my-8">
+        <h1 class="text-3xl text-center">Predict Phishing Website</h1>
+    </section>
+    <section class="">
+        <div class="w-full max-w-2xl mx-auto">
+            <form class=" shadow-md rounded px-8  pb-8 mb-4" action="/prediction" method="POST">
+                {% csrf_token %}
+                <div class="flex justify-between">
+                    <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" >SFH</label>
+                        <input type="number"  placeholder="SFH" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="sfh">
+                    </div>
+ <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">Pop Up Window</label>
+                        <input type="number"  placeholder="Pop Up Window" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="pop">
+                    </div>
+                </div>
+                <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg">SSL Final State</label>
+                        <input type="number"  placeholder="sslFinal State " class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="ssl">
+                    </div>
+                <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">Request_Url</label>
+                        <input type="number"  placeholder="url" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="url">
+                    </div>
+                <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">URL_of_Anchor</label>
+                        <input type="number"  placeholder="URL_of_Anchor" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="anchor">
+                    </div>
+                <div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">Web_traffic</label>
+                        <input type="number"  placeholder="web_traffic" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="web">
+                    </div>
+
+<div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">URL_Length</label>
+                        <input type="number"  placeholder="URL_Length" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="length">
+                    </div>
+
+
+<div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">Age of Domain</label>
+                        <input type="number"  placeholder="domain" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="domain">
+                    </div>
+
+<div class="flex flex-col pt-4 w-80">
+                        <label class="text-lg" name="">Having IP Address</label>
+                        <input type="number"  placeholder="IP" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" name="ip">
+                    </div>
+
+
+
+                <div class="submit-button">
+                    <button type="submit" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8 rounded">Check Status</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

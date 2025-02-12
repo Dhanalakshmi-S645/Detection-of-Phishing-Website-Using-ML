@@ -1,0 +1,114 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <title>Spense</title>
+</head>
+<body>
+    <div>
+    <nav class="navbar bg-black p-4">
+        <p class="text-gray-300 text-center"><span class="underline"> </span> </p>
+    </nav>
+    <div class="spense-top font-mono p-2" >
+        <div class="flex justify-around">
+            <span class=" mt-12  font-extrabold"></span>
+            <div class="mt-12 ">
+                <span class="mx-2"></span>
+                <span class="mx-2"></span>
+                <span class="mx-2"></span>
+            </div>
+            <div class="mt-6">
+                <a href="login" type="click" class="">Login</a>
+                <a href="register" class="bg-black p-6 text-white ml-4 rounded-lg" type="click">Get Started</a>
+            </div>
+        </div>
+        <div class="spense-info flex flex-row-reverse pb-8">
+            <div class="max-w-2xl ml-40 mt-24">
+                <h1 class="text-6xl font-sans"></h1>
+                <p class="mt-6"></p>
+                <div class="flex mt-8 mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2"></span>
+                </div>
+                <div class="flex mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2"></span>
+                </div>
+                <div class="flex mb-4">
+                    <img src="{% static 'Checkmark.svg' %}" alt="" srcset="">
+                    <span class="ml-2"></span>
+                </div>
+                <div class="mt-12">
+                    <input type="click" placeholder="john@example.com" class="py-6 px-4 text-center rounded-lg border border-black">
+                    <button class="bg-black p-6 text-white ml-4 rounded-lg" type="click">Get Started</button>
+                </div>
+            </div>
+            <div class="max-w-md mt-12 ml-12" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="5000">
+                <img src="{% static 'Hero Image.png' %}" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="flex h-6 ml-36 my-8 justify-between mr-40 ">
+        <img src="{% static 'Facebook Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Dribbble Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Youtube Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Pinterest Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Twitter Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Reddit Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Google Logo.png' %}" alt="" srcset="" class="">
+        <img src="{% static 'Slack Logo.png' %}" alt="" srcset="">
+    </div>
+    <div class="ml-36 my-8 mr-40 flex mbl-bg" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="5000" data-aos-easing="linear">
+        <div class="mt-6 w-100 max-w-md">
+            <h1 class="text-5xl font-sans mb-6"></h1>
+            <p class="mb-8 text-lg"></p>
+            <span class="text-2xl underline font-semibold"></span>
+        </div>
+    </div>
+    <div class="ml-36 my-8 mr-40 flex  rounded-3xl">
+        <div class="max-w-3xl" data-aos="zoom-out-right" data-aos-duration="2000" data-aos-delay="5000">
+            <img src="{% static 'Text Editor.png'%}" alt="" srcset="">
+        </div>
+        <div class="mt-36">
+            <h1 class="font-sans text-4xl font-bold"></h1>
+            <p class="mt-4 mb-2"></p>
+            <span class="text-2xl underline font-semibold"></span>
+        </div>
+    </div>
+    <footer class="bg-black text-gray-300 flex flex-row  justify-between pr-36 pb-12">
+        <div class="max-w-sm ml-40 mt-8 ">
+            <span class="font-extrabold"></span>
+            <p class="mt-4"></p>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold"></span>
+            <span class="mt-4"></span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold"></span>
+            <span class="mt-4"></span>
+            <span class="mt-2"></span>
+            <span class="mt-2"></span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold"></span>
+            <span class="mt-4"></span>
+            <span class="mt-2"></span>
+            <span class="mt-2"></span>
+        </div>
+        <div class="mt-8  flex flex-col">
+            <span class="font-extrabold"></span>
+            <span class="mt-4">Jobs</span>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
